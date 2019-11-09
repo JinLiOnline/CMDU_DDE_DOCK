@@ -9,7 +9,7 @@ class CMDUWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit CMDUWidget(QWidget *parent = 0);
+    explicit CMDUWidget(QWidget *parent = nullptr);
     bool enabled();
     void setEnabled(const bool b);
     QString text;

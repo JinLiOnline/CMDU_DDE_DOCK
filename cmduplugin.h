@@ -13,7 +13,7 @@ class CMDUPlugin : public QObject, PluginsItemInterface
     Q_PLUGIN_METADATA(IID "com.deepin.dock.PluginsItemInterface" FILE "cmdu.json")
 
 public:
-    explicit CMDUPlugin(QObject *parent = 0);
+    explicit CMDUPlugin(QObject *parent = nullptr);
 
     const QString pluginName() const override;
     const QString pluginDisplayName() const override;
@@ -23,8 +23,8 @@ public:
     bool pluginIsAllowDisable() override { return true; }
     bool pluginIsDisable() override;
 
-    int itemSortKey(const QString &itemKey);
-    void setSortKey(const QString &itemKey, const int order);
+    int itemSortKey(const QString &itemKey) override;
+    void setSortKey(const QString &itemKey, const int order) override;
 
     QWidget *itemWidget(const QString &itemKey) override;
     QWidget *itemTipsWidget(const QString &itemKey) override;
