@@ -51,7 +51,7 @@ void CMDUWidget::paintEvent(QPaintEvent *e)
     painter.drawText(rect().adjusted(2, 0, 0, 0), Qt::AlignLeft | Qt::AlignVCenter, text);
     if (mp < 50) {
         painter.fillRect(0, height() * (100 - mp) / 100, 2, height() * mp / 100, Qt::white);
-    } else if (mp < 85) {
+    } else if (mp >= 50 && mp < 85) {
         painter.fillRect(0, height() * (100 - mp) / 100, 2, height() * mp / 100, Qt::green);
     } else {
         painter.fillRect(0, height() * (100 - mp) / 100, 2, height() * mp / 100, Qt::red);
